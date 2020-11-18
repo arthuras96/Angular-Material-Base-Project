@@ -1,0 +1,20 @@
+.login-container{
+    margin: 15%;
+}
+
+.login-form-1{
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    /* background: #0062cc; */
+}
+
+.login-form-1 h3{
+    text-align: center;
+    color: #333;
+}
+
+.btnSubmit{
+    font-weight: 600;
+    color: #fff;
+    background-color: #607d8b;
+}

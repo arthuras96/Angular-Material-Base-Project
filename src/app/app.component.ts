@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
+import { ColorSchemeService } from './header/color-scheme.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'btk-v2';
+
+  constructor(private colorSchemeService: ColorSchemeService) {
+    this.colorSchemeService.load();
+  }
 }

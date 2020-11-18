@@ -1,0 +1,24 @@
+<div class="login-container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6 login-form-1">
+                <h3><b>BotTicket v2 - Painel</b> | Login</h3>
+                <form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
+
+                        <mat-form-field class="full-width">
+                                <input matInput placeholder="Nome de Usuário" formControlName="username">
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width">
+                                <input matInput placeholder="Senha" formControlName="password" [type]="hide ? 'password' : 'text'">
+                                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </mat-form-field>
+
+                        <div class="form-group">
+                                <button class="btnSubmit" type="submit" [disabled]="loginForm.invalid" mat-raised-button color="primary" class="full-width">Entrar</button>
+                                <!-- <button type="submit" (click)="login()" [disabled]="loginForm.invalid" mat-raised-button color="primary" class="full-width">Entrar</button> -->
+                        </div>
+                        
+                </form>
+        </div>
+    </div>
+</div>
