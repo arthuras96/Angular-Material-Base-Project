@@ -1,20 +1,19 @@
 .login-container{
-    margin: 15%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .login-form-1{
+    width: max-content;
     padding: 5%;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 20px 10px 0 rgba(0, 0, 0, 0.3), 0 15px 50px 0 rgba(0, 0, 0, 0.5);
     /* background: #0062cc; */
 }
 
 .login-form-1 h3{
     text-align: center;
     color: #333;
-}
-
-.btnSubmit{
-    font-weight: 600;
-    color: #fff;
-    background-color: #607d8b;
 }

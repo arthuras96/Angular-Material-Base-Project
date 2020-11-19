@@ -8,7 +8,7 @@ export class AuthInterceptor implements HttpInterceptor {
 
     constructor(private injector: Injector) {}
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        if(request.url.includes('https://portal.objetivoportal.com.br/') || request.url.includes('http://localhost')) {   
+        if(request.url.includes('http://localhost')) {   
             const loginService = this.injector.get(LoginService)
             if (loginService.isLoggedIn()) {
                 const UserAux = loginService.getUser()
