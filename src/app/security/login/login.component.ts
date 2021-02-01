@@ -42,6 +42,7 @@ export class LoginComponent implements OnInit {
                                   }
                                 },
                                 response =>{
+                                  console.log(response);
                                   this.notificationService.notify(response.error.error_description);
                                 }
                               );

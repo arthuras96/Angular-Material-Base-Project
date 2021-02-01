@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './security/login/login.component';
+import { NgxLoadingModule } from 'ngx-loading';
 
 import { CookieService } from 'ngx-cookie-service';
 import { LoginService } from './security/login/login.service';
@@ -19,6 +20,9 @@ import { HomeComponent } from './home/home.component';
 import { ApplicationErrorHandle } from './app-error.handler';
 import { HeaderComponent } from './header/header.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { LoaderComponent } from './shared/loader/loader.component';
+import { LoaderService } from './shared/loader/loader.service';
+import { ConfirmDialogComponent } from './shared/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     LoginComponent,
     SnackbarComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoaderComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -35,10 +41,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MaterialModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgxLoadingModule.forRoot({
+      fullScreenBackdrop: true
+    })
   ],
   providers: [
     NotificationService,
+    LoaderService,
     CookieService,
     LoginService,
     LoggedInGuard,

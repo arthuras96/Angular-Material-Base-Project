@@ -2,31 +2,35 @@ import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from "@angular/c
 import { Observable } from "rxjs";
 import { Injectable, Injector } from "@angular/core";
 import { LoginService } from "./login/login.service";
+import { LoaderService } from '../shared/loader/loader.service';
+import { finalize } from 'rxjs/operators';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
 
-    constructor(private injector: Injector) {}
+    constructor(private injector: Injector,
+                public loaderService: LoaderService) {}
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+        this.loaderService.isLoading(true);
         if(request.url.includes('http://localhost')) {   
             const loginService = this.injector.get(LoginService)
             if (loginService.isLoggedIn()) {
-                const UserAux = loginService.getUser()
+                const UserAux = loginService.getUser();
                 const authRequest = request.clone(
                     {setHeaders: {
                                     'Authorization': UserAux.token_type + ' ' + UserAux.access_token,
-                                    'Content-Type': 'application/json;charset=utf-8'
+                                    'Content-Type': 'application/json;charset=utf-8',
+                                    //'id-user': UserAux.iduser.toString()
                                 }
                     }
                 )
-                // console.log(authRequest)
-                return next.handle(authRequest)
+                return next.handle(authRequest).pipe(finalize(() => this.loaderService.isLoading(false)));
             } else {
                 // console.log(request)
-                return next.handle(request)
+                return next.handle(request).pipe(finalize(() => this.loaderService.isLoading(false)));
             }
         } else {
-            return next.handle(request);
+            return next.handle(request).pipe(finalize(() => this.loaderService.isLoading(false)));
         }
     }
 }
