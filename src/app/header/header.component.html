@@ -37,11 +37,11 @@
             <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #dropMenu="matMenu">
-            <ng-container *ngFor="let item of menuItems" (click)="checkAction(item.action)">
+            <ng-container *ngFor="let item of menuItems">
                 <div [fxShow]="!item.showOnDesktop" 
                      [fxShow.sm]="!item.showOnTablet" 
                      [fxShow.xs]="!item.showOnMobile">
-                    <button mat-menu-item>
+                    <button mat-menu-item (click)="checkAction(item.action)">
                         <mat-icon class="mr">{{item.icon}}</mat-icon>
                         {{item.label}}
                     </button>
