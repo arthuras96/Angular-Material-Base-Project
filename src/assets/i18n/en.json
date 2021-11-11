@@ -1,0 +1,33 @@
+{
+    "GENERAL": {
+      "ERROR": "Internal error",
+      "SAVE":"Save",
+      "YES": "Yes",
+      "NO": "No",
+      "UNAUTHORIZED": "User not authorized for this action",
+      "FILTER": "Filter",
+      "CANCELEDOPERATION": "Operation canceled"
+    },
+    "LOGIN": {
+      "TITLE": "Panel",
+      "USERNAME": "Username or e-mail",
+      "PASSWORD": "Password",
+      "LOGIN": "Log in",
+      "WELCOME": "Welcome ",
+      "FAIL": "Your request failed. Try again, and contact TI in case of persistence.",
+      "ERRORUSER": "Username and/or password is invalid."
+    },
+    "HEADER": {
+      "TITLE": "Template - Angular",
+      "MENU": {
+        "HOME": "Home",
+        "OUT": "Logout",
+        "TEST": "Test"
+      },
+      "LASTACCESS": "Last access"
+    },
+    "NOTFOUND": {
+      "TITLE": "OOPS! PAGE NOT FOUND",
+      "MESSAGE": "WE ARE SORRY, BUT THE PAGE YOU REQUESTED WAS NOT FOUND"
+    }
+}

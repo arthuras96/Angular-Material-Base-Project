@@ -1,0 +1,33 @@
+{
+    "GENERAL": {
+      "ERROR": "Erro interno",
+      "SAVE":"Salvar",
+      "YES": "Sim",
+      "NO": "Não",
+      "UNAUTHORIZED": "Usuário não autorizado para esta ação",
+      "FILTER": "Filtrar",
+      "CANCELEDOPERATION": "Operação cancelada"
+    },
+    "LOGIN": {
+      "TITLE": "Painel",
+      "USERNAME": "Nome de usuário ou e-mail",
+      "PASSWORD": "Senha",
+      "LOGIN": "Entrar",
+      "WELCOME": "Bem vindo(a) ",
+      "FAIL": "Houve uma falha na sua solicitação. Tente novamente, e contate a TI em caso de persistencia.",
+      "ERRORUSER": "Usuário e/ou senha invalidos."
+    },
+    "HEADER": {
+      "TITLE": "Modelo - Angular",
+      "MENU": {
+        "HOME": "Início",
+        "OUT": "Sair",
+        "TEST": "Teste"
+      },
+      "LASTACCESS": "Último acesso"
+    },
+    "NOTFOUND": {
+      "TITLE": "PÁGINA NÃO ENCONTRADA",
+      "MESSAGE": "LAMENTAMOS, MAS A PÁGINA QUE VOCÊ SOLICITOU NÃO FOI ENCONTRADA"
+    }
+}
