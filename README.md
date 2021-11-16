@@ -17,6 +17,8 @@
 ##### Acesse \node_modules\ngx-tui-image-editor\lib\toast-ui-image-editor.models.d.ts e remova todas as "?" (interrogações) do arquivo.
 ##### Acesse \node_modules\tui-image-editor\dist\tui-image-editor.js e comente a linha 47017
 	//this._buttonElements[this.options.initMenu].dispatchEvent(evt);
+##### Acesse \node_modules\node_modules\tui-image-editor\index.d.ts e altere a linha 326 para:
+	export default tuiImageEditor.ImageEditor;
 
 ##### Executar e abrir projeto
 	ng serve --open
