@@ -89,6 +89,7 @@ registerLocaleData(en, 'en');
     {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'},
     {provide: LOCALE_ID, useValue: window.navigator.language }
   ],
+  entryComponents:[ImageEditorComponent, ConfirmDialogComponent],
   bootstrap: [ AppComponent ]
 })
 
